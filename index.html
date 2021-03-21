@@ -36,7 +36,7 @@
 			{
 				var serial_num = $("#serial_num").val();
 				$.ajax({
-					url: "https://ndmc2021-api.fnc.tw/api?serial=A4330"
+					url: "https://ndmc2021-api.fnc.tw/api?serial="+serial_num
 				}).done(function(data) {
 					console.log(data);
 					console.log(data.isError);
