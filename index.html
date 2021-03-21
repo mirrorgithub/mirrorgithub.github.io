@@ -21,7 +21,7 @@
 	</head>
 	<body>
 		<div id="flex_container">
-			<span class="flex_span" style="text-align: right;">請輸入國防醫學院之序號輸入</span>
+			<span class="flex_span" style="text-align: right;">請輸入國防醫學院抽獎序號</span>
 			<span class="flex_span" style="text-align: left;"><input id="serial_num"></input></span>
 		</div>
 		<div id="flex_container">
@@ -35,9 +35,11 @@
 			function send_data()
 			{
 				var serial_num = $("#serial_num").val();
+				$('button').prop('disabled', true);
 				$.ajax({
 					url: "https://ndmc2021-api.fnc.tw/api?serial="+serial_num
 				}).done(function(data) {
+					$('button').prop('disabled', false);
 					console.log(data);
 					console.log(data.isError);
 					console.log(data.isPass);
