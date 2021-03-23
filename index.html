@@ -57,7 +57,7 @@
 			function send_data()
 			{
 				var serial_num = $("#serial_num").val();
-				$('#loading_div').show();
+				$('#loading_div').fadeIn(500);
 				$('button').prop('disabled', false);
 				$.ajax({
 					url: "https://ndmc2021-api.fnc.tw/api?serial="+serial_num
