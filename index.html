@@ -63,6 +63,7 @@
 					url: "https://ndmc2021-api.fnc.tw/api?serial="+serial_num
 				}).done(function(data) {
 					$('button').prop('disabled', false);
+					$('#loading_div').hide();
 					console.log(data);
 					console.log(data.isError);
 					console.log(data.isPass);
